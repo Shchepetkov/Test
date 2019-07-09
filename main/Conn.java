@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Conn
+class Conn
     {
             private static String username = "root";
             private static String password = "1567436As#";
@@ -49,7 +49,7 @@ public class Conn
                 );
             }
 
-        public static boolean WriteDB() throws SQLException
+        static boolean WriteDB() throws SQLException
             {
                 statmt.execute("INSERT INTO user "
                         + "(Username,Password,Email,Name) "
@@ -142,7 +142,7 @@ public class Conn
                 return ResultPoints;
             }
 
-        public static boolean LoginDB() throws SQLException
+        static boolean LoginDB() throws SQLException
             {
                 resSet = statmt.executeQuery(" SELECT Username ,Password FROM user "
                         + "WHERE (Username = '" + Login.getStrUsername() + "' AND Password ='"

@@ -1,8 +1,9 @@
 package main;
-import javax.swing.*;
-import java.sql.*;
 
-public class Login extends JFrame
+import javax.swing.*;
+import java.sql.SQLException;
+
+class Login extends JFrame
     {
         private static Boolean status = false;
         private JPasswordField txtPassword;
@@ -11,7 +12,7 @@ public class Login extends JFrame
         private static String strUsername;
         private static String strPassword;
 
-        public Login()
+        Login()
             {
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setVisible(false);
@@ -86,17 +87,17 @@ public class Login extends JFrame
                 return status;
             }
 
-        public static String getNam()
+        static String getNam()
             {
                 return user1;
             }
 
-        public static String getStrUsername()
+        static String getStrUsername()
             {
                 return strUsername;
             }
 
-        public static String getStrPassword()
+        static String getStrPassword()
             {
                 return strPassword;
             }

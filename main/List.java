@@ -2,8 +2,6 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
@@ -87,7 +85,7 @@ public class List extends JFrame
 
         private class listMenuL extends JFrame
             {
-                public listMenuL()
+                listMenuL()
                     {
                         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// Приказываем завершать работу программы при закрытии формы
                         setVisible(false);
@@ -173,7 +171,7 @@ public class List extends JFrame
         private class listMenuG extends JFrame
             {
 
-                public listMenuG()
+                listMenuG()
                     {
                         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         setVisible(false);
@@ -256,7 +254,7 @@ public class List extends JFrame
 
         private class list4 extends JFrame
             {
-                public list4()
+                list4()
                     {
 
                         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -291,7 +289,7 @@ public class List extends JFrame
 
         private class list5 extends JFrame
             {
-                public list5()
+                list5()
                     {
                         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         setVisible(false);

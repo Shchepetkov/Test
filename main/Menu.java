@@ -1,10 +1,9 @@
 package main;
 import javax.swing.*;
 
-public class Menu extends JFrame
+class Menu extends JFrame
     {
-
-        public Menu()
+        Menu()
             {
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setVisible(false);

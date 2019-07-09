@@ -4,18 +4,18 @@ import javax.swing.*;
 import java.sql.SQLException;
 import java.util.Enumeration;
 
-public class Test extends JFrame
+class Test extends JFrame
     {
         private static int CounterOtv, CounterJlable, CounterJRadio = 0;
         private static String ListOtv = "";
         private static String ListGroupIsRadioButton = "";
 
-        private JButton Button = new JButton("Начать тест");
+        private JButton Button = new JButton("Начать тестg");
         private JLabel[] labels = new JLabel[21];
         private JRadioButton[] radioButtons = new JRadioButton[84];
         private ButtonGroup bgroup = new ButtonGroup();
 
-        public Test()
+        Test()
             {
                 super("Тест");
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

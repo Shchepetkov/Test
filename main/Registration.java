@@ -1,14 +1,8 @@
 package main;
-import java.awt.EventQueue;
-import java.sql.*;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import java.awt.Font;
-import javax.swing.JPasswordField;
+
+import javax.swing.*;
+import java.awt.*;
+import java.sql.SQLException;
 
 public class Registration extends JFrame
     {
@@ -23,7 +17,7 @@ public class Registration extends JFrame
         private static String strName;
         private static String strEmail;
 
-        public Registration()
+        private Registration()
             {
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setBounds(100, 100, 454, 343);
@@ -102,7 +96,7 @@ public class Registration extends JFrame
 
             }
 
-        public boolean RegisterData() throws ClassNotFoundException, SQLException
+        private boolean RegisterData() throws ClassNotFoundException, SQLException
             {
                 strUsername = txtUsername.getText();
                 strPassword = new String(txtPassword.getPassword());
@@ -172,22 +166,22 @@ public class Registration extends JFrame
                 return status;
             }
 
-        public static String getStrUsername()
+        static String getStrUsername()
             {
                 return strUsername;
             }
 
-        public static String getStrPassword()
+        static String getStrPassword()
             {
                 return strPassword;
             }
 
-        public static String getStrName()
+        static String getStrName()
             {
                 return strName;
             }
 
-        public static String getStrEmail()
+        static String getStrEmail()
             {
                 return strEmail;
             }
