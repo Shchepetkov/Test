@@ -7,7 +7,7 @@ import java.util.List;
 class Conn
     {
             private static String username = "root";
-            private static String password = "1567436As#";
+            private static String password = "root";
             private static String URL = "jdbc:mysql://localhost:3306/dip?verifyServerCertificate=false&requireSSL=false&useLegacyDatetimeCode=false&amp&serverTimezone=UTC";
 
             private static Connection conn;
