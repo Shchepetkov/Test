@@ -44,37 +44,37 @@ class Test extends JFrame
                                 getListOtv();
                                 TrueAndFalse();
                                     if (CounterJRadio == 84)
-                                    {
-                                        JLabel points = new JLabel("Вы набрали: " + Conn.ResultDBPoints() + " из 10.0"+ " балл(а/ов)");
-                                        getContentPane().add(points);
+                                        {
+                                            JLabel points = new JLabel("Вы набрали: " + Conn.ResultDBPoints() + " из 10.0"+ " балл(а/ов)");
+                                            getContentPane().add(points);
 
-                                        JButton but = new JButton("Пройти тест заново");
-                                        but.addActionListener(arg ->
-                                            {
-                                                try {
-                                                    CounterJlable = 0;
-                                                    CounterJRadio = 0;
-                                                    CounterOtv = 0;
-                                                    Conn.setCounterJLable();
-                                                    Conn.setCounterJRadioButton();
-                                                    Conn.setCounterOtv();
+                                            JButton but = new JButton("Пройти тест заново");
+                                            but.addActionListener(arg ->
+                                                {
+                                                    try {
+                                                        CounterJlable = 0;
+                                                        CounterJRadio = 0;
+                                                        CounterOtv = 0;
+                                                        Conn.setCounterJLable();
+                                                        Conn.setCounterJRadioButton();
+                                                        Conn.setCounterOtv();
 
-                                                    Conn.ZeroizeDBPoints();
-                                                    setVisible(false);
-                                                    new Test().setVisible(true);
+                                                        Conn.ZeroizeDBPoints();
+                                                        setVisible(false);
+                                                        new Test().setVisible(true);
 
-                                                } catch (SQLException e) {e.printStackTrace();}
-                                            });
-                                        getContentPane().add(but);
+                                                    } catch (SQLException e) {e.printStackTrace();}
+                                                });
+                                            getContentPane().add(but);
 
-                                        JButton exit = new JButton("Закончить тест");
-                                        exit.addActionListener(arg ->
-                                            {
-                                                    dispose();
-                                                    System.exit(0);
-                                            });
-                                        getContentPane().add(exit);
-                                    }
+                                            JButton exit = new JButton("Закончить тест");
+                                            exit.addActionListener(arg ->
+                                                {
+                                                        dispose();
+                                                        System.exit(0);
+                                                });
+                                            getContentPane().add(exit);
+                                        }
                                 revalidate();
                                 repaint();
                             }
