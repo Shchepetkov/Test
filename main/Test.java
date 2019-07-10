@@ -10,7 +10,7 @@ class Test extends JFrame
         private static String ListOtv = "";
         private static String ListGroupIsRadioButton = "";
 
-        private JButton Button = new JButton("Начать тестg");
+        private JButton Button = new JButton("Начать тест");
         private JLabel[] labels = new JLabel[21];
         private JRadioButton[] radioButtons = new JRadioButton[84];
         private ButtonGroup bgroup = new ButtonGroup();
@@ -24,7 +24,7 @@ class Test extends JFrame
 
                 Button.addActionListener(arg0 ->
                     {
-                        Button.setText("OK");
+                        Button.setText("Ответить");
                         getListRadioButton();
                         try
                             {
@@ -44,17 +44,37 @@ class Test extends JFrame
                                 getListOtv();
                                 TrueAndFalse();
                                     if (CounterJRadio == 84)
-                                        {
-                                            JLabel points = new JLabel("Вы набрали: " + Conn.ResultDBPoints() + " из 10.0"+ " балл(а/ов)");
-                                            getContentPane().add(points);
-                                            JButton Exit = new JButton("Закончить тест");
-                                            Exit.addActionListener(arg ->
-                                                {
+                                    {
+                                        JLabel points = new JLabel("Вы набрали: " + Conn.ResultDBPoints() + " из 10.0"+ " балл(а/ов)");
+                                        getContentPane().add(points);
+
+                                        JButton but = new JButton("Пройти тест заново");
+                                        but.addActionListener(arg ->
+                                            {
+                                                try {
+                                                    CounterJlable = 0;
+                                                    CounterJRadio = 0;
+                                                    CounterOtv = 0;
+                                                    Conn.setCounterJLable();
+                                                    Conn.setCounterJRadioButton();
+                                                    Conn.setCounterOtv();
+
+                                                    Conn.ZeroizeDBPoints();
+                                                    setVisible(false);
+                                                    new Test().setVisible(true);
+
+                                                } catch (SQLException e) {e.printStackTrace();}
+                                            });
+                                        getContentPane().add(but);
+
+                                        JButton exit = new JButton("Закончить тест");
+                                        exit.addActionListener(arg ->
+                                            {
                                                     dispose();
                                                     System.exit(0);
-                                                });
-                                                getContentPane().add(Exit);
-                                        }
+                                            });
+                                        getContentPane().add(exit);
+                                    }
                                 revalidate();
                                 repaint();
                             }
