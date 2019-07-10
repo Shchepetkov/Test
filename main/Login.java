@@ -21,7 +21,7 @@ class Login extends JFrame
                 setTitle("Вход");
                 getContentPane().setLayout(null);
 
-                JLabel hUsername = new JLabel("Username :");
+                JLabel hUsername = new JLabel("Логин :");
                 hUsername.setBounds(78, 52, 89, 14);
                 getContentPane().add(hUsername);
 
