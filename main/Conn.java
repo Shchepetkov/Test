@@ -18,6 +18,21 @@ class Conn
         private static int CounterJRadioButton = -1;
         private static int CounterOtv = 0;
 
+        static void setCounterJLable()
+            {
+                CounterJLable = -1;
+            }
+
+        static void setCounterJRadioButton()
+            {
+                CounterJRadioButton = -1;
+            }
+
+        static void setCounterOtv()
+            {
+                CounterOtv = 0;
+            }
+
             private static List<String> ListDataForJlabels = new ArrayList<>();
             private static List<String> ListDataForJRadioButton = new ArrayList<>();
             private static List<String> ListDataForOtv = new ArrayList<>();
