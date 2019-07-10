@@ -30,7 +30,7 @@ public class Registration extends JFrame
                 hRegister.setBounds(121, 11, 132, 20);
                 getContentPane().add(hRegister);
 
-                JLabel hUsername = new JLabel("Username :");
+                JLabel hUsername = new JLabel("Логин :");
                 hUsername.setBounds(78, 52, 89, 14);
                 getContentPane().add(hUsername);
 
